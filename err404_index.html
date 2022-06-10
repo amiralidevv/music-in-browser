@@ -1,0 +1,25 @@
+<script>
+  Arr = ["song1.mp3", "song2.mp3", "song3.mp3"];
+
+  function func(x) {
+    document.getElementById("musicPlayer").setAttribute("src", Arr[x]);
+  }
+</script>
+
+<!-- In Your Html Code -->
+<!-- Create a music element -->
+<div style="width:500px; margin:auto; position:relative;">
+<audio controls style="width:100%;" controls id="musicPlayer" autoplay>
+  <source src="" type="audio/mp3" />
+  <!--Make sure not to put anything in the src-->
+</audio>
+
+<!-- Create a few buttons -->
+<div style="text-align:center;">
+<button class="button button4" onclick="func(0)">Song 1</button>
+</div>
+<div style="text-align:center;">
+<button class="button button4" onclick="func(1)">Song 2</button>
+</div>
+<!--note from err404: links the css file to html-->
+<link rel="stylesheet" href="1.css">
